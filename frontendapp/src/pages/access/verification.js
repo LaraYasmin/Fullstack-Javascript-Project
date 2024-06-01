@@ -1,9 +1,14 @@
 import React from 'react';
+import SideBanner from '../../components/sideBanner/sideBanner';
+import LogoName from '../../components/logoName/logoName';
 
-const Verification = () => (
-  <div>
-    <h1>Verification Page</h1>
-  </div>
-);
+const Verification = () => {
+  return (  
+    <div> 
+      <SideBanner />
+      <LogoName />
+    </div>
+  )
+};
 
 export default Verification;
