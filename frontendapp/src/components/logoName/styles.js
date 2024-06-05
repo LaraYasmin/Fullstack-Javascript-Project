@@ -6,16 +6,15 @@ export const LogoNameContainer = styled.div`
     align-items: center;
     justify-content: center;
     position: absolute;
-    right: 140px;
-    top: 25%;
-    transform: translateY(-50%);
+    right: 150px;
+    top: 8%;
     width: 30%;
     padding: 2%;
     box-sizing: border-box;
 `;
 
 export const Title = styled.p`
-    font-size: 20px;
+    font-size: 18px;
     color: black;
     margin-bottom: 0px;
     align-self: center;
@@ -37,5 +36,6 @@ export const Image = styled.img`
 export const Line = styled.img`
     margin-top: 26px;
     display: block;
+    width: 70%;
     height: auto;
 `;

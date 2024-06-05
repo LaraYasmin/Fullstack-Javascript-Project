@@ -1,15 +1,21 @@
 import React from 'react';
-import { Container, Email, PassName, EmailName, Password }  from './styles.js';
+import { Container, FieldContainer, Email, Password, Label, Text, Span, Button } from './styles';
 
-const Fields = () => {
+const LoginForm = () => {
     return (
         <Container>
-            <EmailName>E-mail</EmailName>
-            <Email></Email>
-            <PassName>Password</PassName>
-            <Password></Password>
+            <FieldContainer>
+                <Label htmlFor="email">Email</Label>
+                <Email id="email" type="email" />
+            </FieldContainer>
+            <FieldContainer>
+                <Label htmlFor="password">Password</Label>
+                <Password id="password" type="password" />
+                <Button id="login" type="button">Login</Button>
+            </FieldContainer>
+            <Text>Doesn't have an account yet? <Span to="/register">Register.</Span></Text>
         </Container>
-    )
+    );
 };
 
-export default Fields;
+export default LoginForm;
