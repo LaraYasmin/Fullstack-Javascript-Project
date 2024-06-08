@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../connectors/sequelize.js";
 
-const Form = sequelize.define("forms", {
+const Form = sequelize.define("Form", {
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -9,18 +9,26 @@ const Form = sequelize.define("forms", {
     },
     company_name: {
         type: DataTypes.STRING,
+        allowNull: false,
     },
     description: {
         type: DataTypes.STRING,
+        allowNull: false,
     },
     cellphone: {
         type: DataTypes.STRING,
+        allowNull: false,
     },
     responsible: {
         type: DataTypes.STRING,
+        allowNull: false,
     },
-    email: {
+    email_form: {
         type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            isEmail: true,
+        },
     }
 })
 
