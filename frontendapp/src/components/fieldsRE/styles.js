@@ -29,6 +29,7 @@ export const Name = styled.input`
     height: 40px;
     border: none;
     outline: none;
+    padding-left: 10px;
 `;
 
 export const Email = styled.input`
@@ -38,6 +39,7 @@ export const Email = styled.input`
     height: 40px;
     border: none;
     outline: none;
+    padding-left: 10px;
 `;
 
 export const Password = styled.input`
@@ -47,6 +49,7 @@ export const Password = styled.input`
     height: 40px;
     border: none;
     outline: none;
+    padding-left: 10px;
 `;
 
 export const Label = styled.label`
@@ -70,14 +73,16 @@ export const Span = styled(Link)`
 export const Button = styled.button`
     background-color: #B8E0F7;
     border-radius: 16px;
-    width: 100%;
+    width: 102%;
+    margin-left: 12px;
     height: 35px;
     border: none;
     outline: none;
     color: white;
     font-size: 14px;
     cursor: pointer;
-    margin-top: 15px;
+    margin-top: 15px;1
+    align-self: center;
 
     &:hover {
         background-color: #007EC6;

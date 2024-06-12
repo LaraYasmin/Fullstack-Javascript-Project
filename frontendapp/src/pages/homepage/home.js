@@ -9,6 +9,8 @@ import money from '../../assets/money.svg';
 import hand from '../../assets/hand.svg';
 import cell from '../../assets/Group 29.svg';
 import line4 from '../../assets/Line4.svg';
+import footername from '../../assets/footername.svg';
+import win from '../../assets/win.svg';
 
 const Home = () => {
   return (
@@ -60,19 +62,63 @@ const Home = () => {
         </div>
         <div className='right'>
           <form className='form'>
-            <label>Company Name</label>
-            <input></input>
-            <label>Email</label>
-            <input></input>
-            <label>Description</label>
-            <input></input>
-            <label>Contact (Phone number)</label>
-            <input></input>
-            <label>Responsible</label>
-            <input></input>
+            <div className='name'>
+              <label className='label'>Company Name</label>
+              <input className='input'></input>
+              <label className='label'>Email</label>
+              <input className='input'></input>
+              <label className='label'>Description</label>
+              <textarea className='input-d'></textarea>
+              <label className='label'>Contact (Phone number)</label>
+              <input className='input'></input>
+              <label className='label'>Responsible</label>
+              <input className='input'></input>
+              <button className='button'>Send</button>
+            </div>
           </form>
         </div>
       </div>
+      <footer className='footer'>
+        <div className='footer-container'>
+          <div className='flateral-1'>
+            <img className='image-f' src={footername} alt='svg' />
+            <p className='footer-t'>"MarkedUp is driven by a fervent passion for crafting efficient solutions 
+              that redefine standards. Our relentless pursuit of innovation fuels every 
+              aspect of our work, ensuring we deliver cutting-edge solutions that exceed 
+              expectations. With a focus on excellence, we continuously strive to push 
+              boundaries and elevate the industry. At MarkedUp, we don't just create 
+              products; we pioneer transformative experiences that inspire and empower."
+            </p>
+          </div>
+          <div className='flateral-2'>
+            <p className='footer-f'>Modules</p>
+            <p className='footer-1t'>Internal Communication<br></br>
+              Development
+              <br></br>
+              Research
+              <br></br>
+              Training
+              <br></br>
+              Advocacy Marketing
+            </p>
+          </div>
+          <div className='flateral-3'>
+            <p className='footer-f'>Navigation</p>
+            <p className='footer-1t'>About Us<br></br>
+              AI
+              <br></br>
+              Price
+              <br></br>
+              Blog
+              <br></br>
+              Support
+              <br></br>
+              Contact
+            </p>
+          </div>
+          <img src={win} className='image-w' alt='svg' />
+        </div>
+      </footer>
     </div>
   )
 }
