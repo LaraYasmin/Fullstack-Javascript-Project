@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, FieldContainer, Email, Password, Label, Text, Span, Name, Button } from './styles';
-import { postUsers } from '../../services/users';
+import { postUsers } from '../../utils/serverFront';
 const RegisterForm = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');

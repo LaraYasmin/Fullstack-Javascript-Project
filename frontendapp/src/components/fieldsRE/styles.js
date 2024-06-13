@@ -81,7 +81,7 @@ export const Button = styled.button`
     color: white;
     font-size: 14px;
     cursor: pointer;
-    margin-top: 15px;1
+    margin-top: 15px;
     align-self: center;
 
     &:hover {

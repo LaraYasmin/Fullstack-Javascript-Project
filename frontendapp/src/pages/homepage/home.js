@@ -11,8 +11,28 @@ import cell from '../../assets/Group 29.svg';
 import line4 from '../../assets/Line4.svg';
 import footername from '../../assets/footername.svg';
 import win from '../../assets/win.svg';
+import { postForms } from '../../utils/serverFront';
 
 const Home = () => {
+  const [form, setFormValue] = React.useState({
+    company_name: '',
+    description: '',
+    cellphone: '',
+    responsible: '',
+    email: ''
+  })
+
+  const handleChange = (event) => {
+    const { name, value } = event.target
+    setFormValue({ ...form, [name]: value })
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const response = await postForms(form);
+    console.log(response)
+  }
+
   return (
     <div className='home'>
       <nav className='navbar'>
@@ -28,8 +48,8 @@ const Home = () => {
         </div>
       </nav>
       <div className='containerMid'>
-        <button className='login'>Login</button>
-        <button className='register'>Register</button>
+        <a href='/login'><button className='login'>Login</button></a>
+        <a href='/register'>'<button className='register'>Register</button></a>
       </div>
       <div className='containerHead'>
         <h1 className='title'>Discover, develop, deploy,</h1>
@@ -53,7 +73,7 @@ const Home = () => {
       </div>
       <div className='containerBase'>
         <div className='lateral'>
-          <h1>Talk to us to be part of the Marked<span class='highlight'>UP</span> solutions and make your company grow</h1>
+          <h1>Talk to us to be part of the Marked<span className='highlight'>UP</span> solutions and make your company grow</h1>
           <p>MarkedUP is a leading company in the development of innovative software solutions that transform the way businesses operate. With a team of dedicated specialists, MarkedUP stands out by creating customized solutions tailored to meet each client's specific needs. Our mission is to simplify complex processes and increase efficiency through advanced technologies, ensuring our clients are always ahead in the competitive market. As a result, our clients have reported significant profit increases thanks to our effective solutions.</p>
           <div className='lateral-1'>
             <img className='line4'src={line4} alt='svg' />
@@ -61,19 +81,19 @@ const Home = () => {
           </div>
         </div>
         <div className='right'>
-          <form className='form'>
+          <form className='form' onSubmit={handleSubmit}>
             <div className='name'>
               <label className='label'>Company Name</label>
-              <input className='input'></input>
+              <input className='input' required name='company_name' value={form.company_name} onChange={handleChange}></input>
               <label className='label'>Email</label>
-              <input className='input'></input>
-              <label className='label'>Description</label>
-              <textarea className='input-d'></textarea>
+              <input className='input' required name='email' value={form.email} onChange={handleChange}></input>
+              <label className='label' >Description</label>
+              <textarea className='input-d' required name='description' value={form.description} onChange={handleChange}></textarea>
               <label className='label'>Contact (Phone number)</label>
-              <input className='input'></input>
+              <input className='input' required name='cellphone' value={form.cellphone} onChange={handleChange}></input>
               <label className='label'>Responsible</label>
-              <input className='input'></input>
-              <button className='button'>Send</button>
+              <input className='input' required name='responsible' value={form.responsible} onChange={handleChange}></input>
+              <button className='button' type='submit'>Send</button>
             </div>
           </form>
         </div>

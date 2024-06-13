@@ -87,6 +87,7 @@
     color: #007EC6;
     cursor: pointer;
     margin-right: 15px;
+    text-decoration: none; /* Remover sublinhado do link */
 }
 
 .register {
@@ -209,6 +210,7 @@
     justify-content: center;
     width: 467px;
     height: 652px;
+    margin-bottom: 70px;
 }
 
 .name {
@@ -250,6 +252,7 @@
     align-self: center;
     font-size: 13px;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 .footer {
