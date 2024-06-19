@@ -79,6 +79,7 @@ const Home = () => {
             <img className='line4'src={line4} alt='svg' />
             <p className='subtitle-1'>Entrepreneurs from various sectors praise the company for its ability to understand their specific needs and deliver products that exceed expectations.</p>
           </div>
+          <p className='subtitle-1'>This is a study website, the MarkedUp company doesn't exist.</p>
         </div>
         <div className='right'>
           <form className='form' onSubmit={handleSubmit}>
