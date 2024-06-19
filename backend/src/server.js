@@ -86,3 +86,17 @@ app.get('/protected' , authenticate, (req, res) => {
 });
 
 app.use('/', formCreate);
+
+app.post('/login', async (req, res) => {
+    const { email, password } = req.body;
+    const user = await User.findOne({ where: { email, password } });
+
+    if (!user) {
+        return res.status(400).send({ error: 'Invalid email or password' });
+    }
+
+    if (user.isVerified) {
+        return res.json()
+    }
+
+});

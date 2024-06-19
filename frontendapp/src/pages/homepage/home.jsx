@@ -49,7 +49,7 @@ const Home = () => {
       </nav>
       <div className='containerMid'>
         <a href='/login'><button className='login'>Login</button></a>
-        <a href='/register'>'<button className='register'>Register</button></a>
+        <a href='/register'><button className='register'>Register</button></a>
       </div>
       <div className='containerHead'>
         <h1 className='title'>Discover, develop, deploy,</h1>
@@ -60,7 +60,7 @@ const Home = () => {
       </div>
       <div className='containerCollaborative'>
         <h1 className='sub'>Our Collaborative Approach</h1>
-        <p className='subtitle'>With a team of dedicated specialists, MarkedUP stands out by creating customized solutions tailored to meet</p>
+        <p className='subtitle'>With a team of dedicated speci alists, MarkedUP stands out by creating customized solutions tailored to meet</p>
         <p className='subtitle'>each client's specific needs.</p>
       </div>
       <div className='containerImg'>

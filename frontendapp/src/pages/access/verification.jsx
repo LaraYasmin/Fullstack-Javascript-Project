@@ -1,6 +1,6 @@
 import React from 'react';
-import SideBanner from '../../components/sideBanner/sideBanner';
-import LogoName from '../../components/logoName/logoName';
+import SideBanner from '../../components/sideBanner/sideBanner.jsx';
+import LogoName from '../../components/logoName/logoName.jsx';
 import VerificationFields from '../../components/fieldsVE/fieldsVE.jsx';
 
 const Verification = () => {
