@@ -87,6 +87,7 @@ app.get('/protected' , authenticate, (req, res) => {
 
 app.use('/', formCreate);
 
+//login
 app.post('/login', async (req, res) => {
     const { email, password } = req.body;
     const user = await User.findOne({ where: { email, password } });

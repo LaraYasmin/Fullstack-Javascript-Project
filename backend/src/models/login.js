@@ -21,6 +21,8 @@ module.exports = (sequelize) => {
         },
         }
     )
+    
+    return Login
 };
 
 export default Login;

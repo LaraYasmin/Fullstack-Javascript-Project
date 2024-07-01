@@ -1,7 +1,8 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../connectors/sequelize.js";
 
-const Form = sequelize.define("Form", {
+module.exports = (sequelize) => {
+    const Form = sequelize.define("Form", {
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -31,5 +32,7 @@ const Form = sequelize.define("Form", {
         },
     }
 })
+    return Form
+};
 
 export default Form;
