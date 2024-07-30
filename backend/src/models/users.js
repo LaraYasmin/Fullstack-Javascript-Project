@@ -1,5 +1,5 @@
 import { DataTypes } from "sequelize";
-import sequelize from "../connectors/sequelize.js";
+import sequelize from "../connectDB/mysqlConnect.js";
 
 module.exports = (sequelize) => {
     const User = sequelize.define("User", {
@@ -25,16 +25,15 @@ module.exports = (sequelize) => {
             allowNull: false,
         },
         verfication_code: {
-            type: DataTypes.STRING(4), //receive the code with size 4
+            type: DataTypes.STRING(4),
             allowNull: false,
         },
         is_verified: {
-            type: DataTypes.BOOLEAN, //check the code validity (true or false)
+            type: DataTypes.BOOLEAN,
             allowNull: false,
         }
     });
 
-    //encrypting password
     User.beforeSave(async (user) => {
         if (user.password) {
             const salt_random_value = await bcrypt.genSalt(10);

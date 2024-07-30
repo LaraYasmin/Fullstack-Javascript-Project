@@ -1,5 +1,5 @@
 import { DataTypes } from "sequelize";
-import sequelize from "../connectors/sequelize.js";
+import sequelize from "../connectDB/mysqlConnect.js";
 
 module.exports = (sequelize) => {
     const Form = sequelize.define("Form", {

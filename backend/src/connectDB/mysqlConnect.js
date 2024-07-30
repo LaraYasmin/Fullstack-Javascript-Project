@@ -1,7 +1,4 @@
 import Sequelize from 'sequelize';
-require('dotenv').config();
-
-import Sequelize from 'sequelize';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -20,5 +17,8 @@ const db = {
 };
 
 db.models.User = require('../models/users.js')(sequelize, Sequelize);
+db.sequelize.sync().then(() => {
+    console.log('Connection has been established successfully.');
+})
 
 export default db;
