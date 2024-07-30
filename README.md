@@ -4,5 +4,3 @@ Hi! These files are a project that I did to have some fun and remember of old co
 - I did the back and frontend (node - react)
 - The idea is to deploy this app sooner (still in development)
 - The MarkedUP company is fake, this is just a personal project to study.
-
-Thank you for come here!
