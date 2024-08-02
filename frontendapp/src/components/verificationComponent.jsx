@@ -10,6 +10,7 @@ const VerificationComponent = () => {
                         Write the verification code below.
                     </p>
                 </div>
+
                 <div className="flex justify-center mt-4 mb-4">
                     <input
                         type="text"
@@ -32,6 +33,7 @@ const VerificationComponent = () => {
                         className="bg-gray-200 text-center appearance-none rounded-xl w-6 py-3 text-gray-700 leading-tight focus:outline-none"
                     />
                 </div>
+
                 <div className="flex items-center justify-center">
                     <button
                         type="submit"
@@ -40,6 +42,7 @@ const VerificationComponent = () => {
                         send
                     </button>
                 </div>
+                
                 <img src={line} alt="image_line" className='w-100 mt-8 h-auto'/>
                 <div className='flex justify-center mt-4'>
                     <p className='text-sm'>

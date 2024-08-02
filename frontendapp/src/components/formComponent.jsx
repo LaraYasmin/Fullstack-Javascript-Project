@@ -15,6 +15,7 @@ const FormComponent = () => {
                             className="shadow-md bg-white appearance-none rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none"
                         />
                     </div>
+
                     <div className="mb-6">
                         <label className="block text-sm font-medium mb-2" htmlFor="email">
                             Email
@@ -25,6 +26,7 @@ const FormComponent = () => {
                             className="shadow-md bg-white appearance-none rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none"
                         />
                     </div>
+
                     <div className="mb-6">
                         <label className="block text-sm font-medium mb-2" htmlFor="description">
                             Description
@@ -34,6 +36,7 @@ const FormComponent = () => {
                             className="shadow-md bg-white appearance-none rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none"
                         />
                     </div>
+
                     <div className="mb-6">
                         <label className="block text-sm font-medium mb-2" htmlFor="contact">
                             Contact (Phone number)
@@ -44,6 +47,7 @@ const FormComponent = () => {
                             className="shadow-md bg-white appearance-none rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none"
                         />
                     </div>
+
                     <div className="mb-6">
                         <label className="block text-sm font-medium mb-2" htmlFor="responsible">
                             Responsible
@@ -54,6 +58,7 @@ const FormComponent = () => {
                             className="shadow-md bg-white appearance-none rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none"
                         />
                     </div>
+                    
                     <div className="flex items-center justify-center">
                         <button
                             type="submit"

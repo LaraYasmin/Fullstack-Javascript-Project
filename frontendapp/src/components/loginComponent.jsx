@@ -14,6 +14,7 @@ const LoginComponent = () => {
                         className="bg-gray-200 appearance-none rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none"
                     />
                 </div>
+
                 <div className="mb-6">
                     <label className="block text-sm font-medium mb-2" htmlFor="password">
                         Password
@@ -24,6 +25,7 @@ const LoginComponent = () => {
                         className="bg-gray-200 appearance-none rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none"
                     />
                 </div>
+
                 <div className="flex items-center justify-between">
                     <button
                         type="submit"
@@ -32,6 +34,7 @@ const LoginComponent = () => {
                         login
                     </button>
                 </div>
+                
                 <div className='flex justify-center mt-4'>
                     <p className='text-sm'>
                         Doesn’t have an account yet?<span className='font-medium text-blue-400'> Register.</span>

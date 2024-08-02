@@ -5,7 +5,7 @@ import logoW from "../assets/nameW.svg";
 const FooterComponent = () => {
     return (
         <div className="footer w-full bg-black h-auto mt-4 py-10">
-            <div className='flex flex-col md:flex-row w-10/12 mx-auto gap-8'>
+            <div className='flex flex-col md:flex-row w-10/12 mx-auto gap-8 mt-8'>
                 <div className='flex flex-col items-center md:items-start md:w-1/4 text-center md:text-left text-white'>
                     <img src={logoW} alt="image_name" className="w-5/10 h-5 mb-4"/>
                     <p className='text-sm mt-4'>
