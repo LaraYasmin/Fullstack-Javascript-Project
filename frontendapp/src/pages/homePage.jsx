@@ -11,26 +11,9 @@ import cell from '../assets/cell.svg';
 import { useState } from 'react';
 import FormComponent from '../components/formComponent';
 import lineBlue from '../assets/Line4.svg';
+import FooterComponent from '../components/footerComponent';
 
 const Home = () => {
-  // const [form, setFormValue] = React.useState({
-  //   company_name: '',
-  //   description: '',
-  //   cellphone: '',
-  //   responsible: '',
-  //   email: ''
-  // })
-
-  // const handleChange = (event) => {
-  //   const { name, value } = event.target
-  //   setFormValue({ ...form, [name]: value })
-  // }
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   // const response = await postForms(form);
-  //   // console.log(response)
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -103,7 +86,7 @@ const Home = () => {
         </p>
         <img src={head} alt="image_people" className="object-cover w-10/12"/>
         <p className='text-4xl mt-16 mb-5 font-medium md:w-6/12 text-center'>Our Collaborative Approach</p>
-        <p className='text-gray-400 text-md md:w-6/12 text-center'>With a team of dedicated specialists, MarkedUP stands out by creating</p>
+        <p className='text-gray-400 mt-3 text-md md:w-6/12 text-center'>With a team of dedicated specialists, MarkedUP stands out by creating</p>
         <p className='text-gray-400 mb-16 text-md md:w-6/12 text-center'>  
           customized solutions tailored to meet each client's specific needs.
         </p>
@@ -130,22 +113,31 @@ const Home = () => {
         </div>
       </div>
 
-      <div className='flex flex-row justify-between items-center w-full mx-auto'> 
-        <div className='flex flex-col md:flex-row w-10/12 mx-auto'>
-          <p className='text-2xl mb-5 font-medium md:w-6/12'>Talk to us to be part of the MarkedUP solutions and make your company grow</p>
-          <p className='text-sm w-1/3'>MarkedUP is a leading company in the development of innovative software solutions that transform the way businesses operate. With a team of dedicated specialists, 
-            MarkedUP stands out by creating customized solutions tailored to meet each client's specific needs. Our mission is to simplify complex processes and increase 
-            efficiency through advanced technologies, ensuring our clients are always ahead in the competitive market. As a result, our clients have reported significant profit 
-            increases thanks to our effective solutions.
-          </p>
-
-          <div className='flex flex-row'>
-            <img src={lineBlue} alt="image_line" className='mt-8 w-8 h-8'/>
-            <p className='text-sm w-1/3'>Entrepreneurs from various sectors praise the company for its ability to understand their specific needs and deliver products that exceed expectations.</p>
+      <div className='flex flex-col md:flex-row mt-12 w-full'>
+        <div className='flex flex-col md:w-1/2 items-center text-center md:text-left'>
+          <div className='flex flex-col justify-center items-center mx-auto md:w-10/12'>
+            <p className='text-2xl mb-10 w-8/12 font-medium mt-8'>
+              Talk to us to be part of the Marked<span className='text-blue-500 font-medium'>UP </span>solutions and make your company grow
+            </p>
+            <p className='text-sm mb-5 w-8/12'>
+              MarkedUP is a leading company in the development of innovative software solutions that transform the way 
+              businesses operate. With a team of dedicated specialists, 
+              MarkedUP stands out by creating customized solutions tailored to meet each client's specific needs. Our mission is to simplify 
+              complex processes and increase efficiency through advanced technologies, ensuring our clients are always ahead in the competitive market. 
+              As a result, our clients have reported significant profit increases thanks to our effective solutions.
+            </p>
+          </div>
+          <div className='flex md:flex-row justify-center items-center mt-6'>
+            <img src={lineBlue} alt="image_line" className='w-8 h-11'/>
+            <p className='text-sm mt-4 md:mt-0 text-gray-400 md:ml-4 w-full md:w-1/2'>
+              Entrepreneurs from various sectors praise the company for its ability to understand their specific needs and deliver products that exceed expectations.
+            </p>
           </div>
         </div>
-        <FormComponent />
+          <FormComponent />
       </div>
+
+      <FooterComponent />
     </div>
   )
 }
