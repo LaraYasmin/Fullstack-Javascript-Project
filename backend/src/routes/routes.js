@@ -1,9 +1,11 @@
 import express from 'express';
-import { registerUser, loginUser } from '../controllers/systemController.js';
+import { postUserRegister, postUserLogin, getFormData, postFormData } from '../controllers/systemController.js';
 
 const router = express.Router();
 
-router.get('/register/', registerUser);
-router.get('/login/', loginUser);
+router.get('/', getFormData);
+router.get('/register/', postUserRegister);
+router.get('/login/', postUserLogin);
+router.post('/post-form/', postFormData)
 
 export default router;

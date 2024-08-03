@@ -1,28 +1,18 @@
 import { DataTypes } from "sequelize";
-import sequelize from "../connectors/sequelize.js";
+import db from "../connectDB/mysqlConnect.js";
 
-module.exports = (sequelize) => {
-    const Login = sequelize.define("Login", {
-        id: {
-            type: DataTypes.INTEGER,
-            autoIncrement: true,
-            primaryKey: true,
-        },
-        email: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                isEmail: true,
-            }
-        },
-        password: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
+const Login = db.sequelize.define("Login", {
+    email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            isEmail: true,
         }
-    )
-    
-    return Login
-};
+    },
+    password: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+});
 
 export default Login;

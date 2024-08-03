@@ -1,38 +1,27 @@
 import { DataTypes } from "sequelize";
-import sequelize from "../connectDB/mysqlConnect.js";
+import db from "../connectDB/mysqlConnect.js";
 
-module.exports = (sequelize) => {
-    const Form = sequelize.define("Form", {
-    id: {
-        type: DataTypes.INTEGER,
-        autoIncrement: true,
-        primaryKey: true,
-    },
+const Form = db.sequelize.define("Form", {
     company_name: {
         type: DataTypes.STRING,
-        allowNull: false,
     },
     description: {
         type: DataTypes.STRING,
-        allowNull: false,
     },
-    cellphone: {
+    contact: {
         type: DataTypes.STRING,
-        allowNull: false,
     },
     responsible: {
         type: DataTypes.STRING,
-        allowNull: false,
     },
-    email_form: {
+    email: {
         type: DataTypes.STRING,
-        allowNull: false,
         validate: {
             isEmail: true,
         },
     }
-})
-    return Form
-};
+}, {
+    timestamps: false
+});
 
 export default Form;

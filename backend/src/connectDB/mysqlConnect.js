@@ -16,7 +16,6 @@ const db = {
     models: {},
 };
 
-db.models.User = require('../models/users.js')(sequelize, Sequelize);
 db.sequelize.sync().then(() => {
     console.log('Connection has been established successfully.');
 })

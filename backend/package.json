@@ -2,12 +2,13 @@
   "name": "@fullstackjs/backend",
   "version": "1.0.0",
   "description": "Fullstack JS project",
-  "main": "server.js",
+  "main": "index.js",
   "author": "Lara Yasmin",
   "license": "MIT",
   "private": false,
   "type": "module",
   "dependencies": {
+    "@fullstackjs/backend": "file:",
     "bcrypt": "^5.1.1",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
@@ -18,7 +19,7 @@
     "sequelize": "^6.37.3"
   },
   "scripts": {
-    "start": "nodemon src/server.js"
+    "start": "nodemon index.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.24.6",
