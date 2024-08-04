@@ -16,9 +16,6 @@ const Form = db.sequelize.define("Form", {
     },
     email: {
         type: DataTypes.STRING,
-        validate: {
-            isEmail: true,
-        },
     }
 }, {
     timestamps: false
