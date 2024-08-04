@@ -1,17 +1,8 @@
 import api from './api';
 
-export const postUsers = async (data) => {
+export const postForm = async (data) => {
     try{
-        const response = await api.post('/register/', data);
-        return response.data;
-    } catch (err) {
-        console.log(err);
-    }
-}
-
-export const postLogin = async (data) => {
-    try {
-        const response = await api.post('/login/', data);
+        const response = await api.post('/post-form/', data);
         return response.data;
     } catch (err) {
         console.log(err);

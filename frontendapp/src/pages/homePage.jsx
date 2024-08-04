@@ -5,6 +5,9 @@ import lineV from '../assets/LineV.svg';
 import linkedin from '../assets/Vector.svg';
 import instagram from '../assets/Vector2.svg';
 import facebook from '../assets/Vector3.svg';
+import link from '../assets/VectorW.svg';
+import insta from '../assets/Vector2W.svg';
+import face from '../assets/Vector3W.svg';
 import hand from '../assets/hand.svg';
 import money from '../assets/money.svg';
 import cell from '../assets/cell.svg';
@@ -12,14 +15,27 @@ import { useState } from 'react';
 import FormComponent from '../components/formComponent';
 import lineBlue from '../assets/Line4.svg';
 import FooterComponent from '../components/footerComponent';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const scrollTo = () => {
+    const element = document.getElementById('contact');
+    const element2 = document.getElementById('footer');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    if (element2) {
+      element2.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+  
   return (
     <div className='bg-gray-50'>
       <div className='flex flex-row h-20 md:mb-16 w-full items-center'>
@@ -36,8 +52,8 @@ const Home = () => {
 
           <div className="hidden md:flex md:items-center md:justify-end w-full">
             <button className='py-2 px-2 text-blue-500 font-medium'>Home</button>
-            <button className='py-2 px-2'>Contact</button>
-            <button className='py-2 px-2'>MarkedUP</button>
+            <button onClick={scrollTo} className='py-2 px-2'>Contact</button>
+            <button className='py-2 px-2' onClick={scrollTo}>MarkedUP</button>
             <img src={lineV} alt="image_lineV" className="ml-3"/>
             <img src={linkedin} alt="image_linkedin" className="ml-3 w-5"/>
             <img src={instagram} alt="image_instagram" className="ml-3"/>
@@ -46,10 +62,10 @@ const Home = () => {
           </div>
 
           <div className='hidden md:flex md:items-center md:justify-end w-full'>
-            <button className='py-1 px-6 text-sm ml-5 text-blue-500 border-2 border-blue-500 rounded-lg md:mr-5 mb-2 md:mb-0'>
+            <button className='py-1 px-6 text-sm ml-5 text-blue-500 border-2 border-blue-500 rounded-lg md:mr-5 mb-2 md:mb-0' onClick={() => navigate('/login')}>
               Login
             </button>
-            <button className='py-1 px-7 text-sm bg-black text-white border-2 border-black rounded-lg md:mr-24'>
+            <button className='py-1 px-7 text-sm bg-black text-white border-2 border-black rounded-lg md:mr-24' onClick={() => navigate('/register')}>
               Register
             </button>
           </div>
@@ -57,7 +73,7 @@ const Home = () => {
 
         {/* Mobile Menu */}
 
-        <div className={`fixed inset-0 bg-gray-800 bg-opacity-75 z-50 transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 md:hidden`}>
+        <div className={`fixed inset-0 bg-gray-900 bg-opacity-75 z-50 transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 md:hidden`}>
           <div className="flex flex-col items-center justify-center p-6 mt-20">
             <button onClick={toggleMenu} className="text-white mb-6">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -67,11 +83,19 @@ const Home = () => {
             <button className='py-2 px-4 text-white font-medium'>Home</button>
             <button className='py-2 px-4 text-white'>Contact</button>
             <button className='py-2 px-4 text-white'>MarkedUP</button>
-            <div className="mt-6 flex space-x-4">
-              <img src={linkedin} alt="image_linkedin" className="w-5"/>
-              <img src={instagram} alt="image_instagram"/>
-              <img src={facebook} alt="image_facebook"/>
-            </div>
+            <div className='hidden md:flex md:items-center md:justify-end w-full'>
+          </div>
+          <button className='py-1 px-6 text-sm mt-5 text-white bg-blue-500 border-2 border-blue-500 rounded-lg md:mr-5 mb-4 md:mb-0' onClick={() => navigate('/login')}>
+              Login
+          </button>
+          <button className='py-1 px-7 text-sm bg-black text-white border-2 border-black rounded-lg md:mr-24' onClick={() => navigate('/register')}>
+            Register
+          </button>
+          <div className="mt-6 flex space-x-4">
+              <img src={link} alt="image_linkedin" className="w-5"/>
+              <img src={insta} alt="image_instagram"/>
+              <img src={face} alt="image_facebook"/>
+          </div>
           </div>
         </div>
       </div>
@@ -113,7 +137,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className='flex flex-col md:flex-row mt-12 w-full'>
+      <div id='contact' className='flex flex-col md:flex-row mt-12 w-full'>
         <div className='flex flex-col md:w-1/2 items-center text-center md:text-left'>
           <div className='flex flex-col justify-center items-center mx-auto md:w-10/12'>
             <p className='text-2xl mb-10 w-8/12 font-medium mt-8'>
@@ -136,8 +160,7 @@ const Home = () => {
         </div>
           <FormComponent />
       </div>
-
-      <FooterComponent />
+      <div id='footer'><FooterComponent /></div>
     </div>
   )
 }
